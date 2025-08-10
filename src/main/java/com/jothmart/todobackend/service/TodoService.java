@@ -24,6 +24,21 @@ public class TodoService {
         return todos;
     }
 
+    public Todo save(Todo todo){
+        if(todo.getId()==-1 || todo.getId()==0){
+            todo.setId(idCounter++);
+        }else{
+            deleteById(todo.getId());
+        }
+        todos.add(todo);
+        return todo;
+    }
+
+
+    public  boolean deleteById(Long todo_id){
+        return this.todos.removeIf(obj -> obj.getId() == todo_id);
+    }
+
     public  boolean deleteById(String username, Long todo_id){
         return this.todos.removeIf(obj -> obj.getId() == todo_id);
     }

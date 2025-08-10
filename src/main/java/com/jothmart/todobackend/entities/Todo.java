@@ -10,7 +10,9 @@ public class Todo {
     private Date targetDate;
     private boolean isDone;
 
-
+    // Default constructor (required for some frameworks/libraries)
+    public Todo() {
+    }
     
     public Todo(long id, String username, String description, Date targetDate, boolean isDone) {
         super();
