@@ -2,11 +2,8 @@ package com.jothmart.todobackend.controller;
 
 public class HelloWorldBean {
 
-
-    
     private String message;
 
-    // create the constructor
     public HelloWorldBean(String message){
         this.message = message;
     }
@@ -23,7 +20,5 @@ public class HelloWorldBean {
     public String toString() {
         return "HelloWorldBean [message=" + message + "]";
     }
-
-
     
 }

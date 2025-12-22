@@ -35,14 +35,40 @@ public class TodoService {
     }
 
 
-    public  boolean deleteById(Long todo_id){
+    /*  public  boolean deleteById(Long todo_id){
+        return this.todos.removeIf(obj -> obj.getId() == todo_id);
+    } 
+ */
+
+public Todo deleteById(long id) {
+		Todo todo = findById(id);
+		
+		if(todo==null) return null;
+		
+		if(todos.remove(todo)) {
+			return todo;
+		}
+		
+		return null;
+	}
+
+	public Todo findById(long id) {
+		for(Todo todo:todos) {
+			if(todo.getId() == id) {
+				return todo;
+			}
+		}
+		
+		return null;
+	}
+
+
+
+    /* public  boolean deleteById(String username, Long todo_id){
+        System.out.println("====>>>> I am using the ones if not Jed DELETE::::: username "+username+"   |  todo_id : "+todo_id);
         return this.todos.removeIf(obj -> obj.getId() == todo_id);
     }
-
-    public  boolean deleteById(String username, Long todo_id){
-        return this.todos.removeIf(obj -> obj.getId() == todo_id);
-    }
-
+ */
     /* public Todo findById(Long todo_id){
         Optional<Todo> foundObjectOptional = this.todos.stream()
         .filter(obj -> obj.getId() == todo_id)
@@ -54,7 +80,7 @@ public class TodoService {
         return null;
     } */
 
-    public Todo findById(long id) {
+   /*  public Todo findById(long id) {
 		for(Todo todo:todos) {
 			if(todo.getId() == id) {
 				return todo;
@@ -62,6 +88,6 @@ public class TodoService {
 		}
 		
 		return null;
-	}
+	} */
 
 }
