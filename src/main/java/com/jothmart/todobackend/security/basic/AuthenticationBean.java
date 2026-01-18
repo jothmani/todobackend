@@ -1,4 +1,4 @@
-package com.jothmart.todobackend.auth.basic;
+package com.jothmart.todobackend.security.basic;
 
 public class AuthenticationBean {
    

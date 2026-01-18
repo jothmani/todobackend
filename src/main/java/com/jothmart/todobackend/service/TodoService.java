@@ -3,10 +3,8 @@ package com.jothmart.todobackend.service;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-import com.jothmart.todobackend.entities.Todo;
+import com.jothmart.todobackend.entity.Todo;
 
 @Service
 public class TodoService {

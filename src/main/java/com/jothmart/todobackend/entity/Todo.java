@@ -1,4 +1,4 @@
-package com.jothmart.todobackend.entities;
+package com.jothmart.todobackend.entity;
 
 import java.util.Date;
 

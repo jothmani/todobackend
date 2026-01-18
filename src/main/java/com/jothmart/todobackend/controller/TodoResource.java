@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import com.jothmart.todobackend.entities.Todo;
+import com.jothmart.todobackend.entity.Todo;
 import com.jothmart.todobackend.service.TodoService;
 
 @RestController

@@ -16,12 +16,12 @@ import static org.springframework.security.config.Customizer.withDefaults;
 import java.util.Arrays;
 import java.util.List;
 
-@Configuration
+/* @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
+@EnableMethodSecurity */
 public class SpringSecurityConfigurationBasicAuth {
 
-    @Bean
+   /*  @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         // .cors(cors -> cors.configurationSource(corsConfigurationSource()))
@@ -48,7 +48,7 @@ public class SpringSecurityConfigurationBasicAuth {
         // etc.)
 
         return http.build();
-    }
+    } */
 
 
   /*   @Bean
@@ -72,7 +72,7 @@ public class SpringSecurityConfigurationBasicAuth {
     } */
 
     // Example CORS configuration for Angular frontend
-     @Bean
+    /*  @Bean
      public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of("http://localhost:4200")); 
@@ -83,7 +83,7 @@ public class SpringSecurityConfigurationBasicAuth {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-     }
+     } */
     
 
 }
