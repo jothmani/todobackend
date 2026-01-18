@@ -1,30 +1,21 @@
 package com.jothmart.todobackend.entity;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Table;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.SequenceGenerator;
 
 @Entity(name = "users")
 // public class User implements UserDetails {
 
 public class User  {
      @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_generator")
+    @SequenceGenerator(name = "user_id_generator", sequenceName = "users_SEQ", allocationSize = 1)
     @Column(nullable = false) 
-    private Integer id;
+    private Integer user_id;
 
    /*  @Column(nullable = false)
     private String firstName;
@@ -55,9 +46,12 @@ public class User  {
     }
  */
  // @Override
-    public Integer getId() {
-        return id;
-    }
+    /* public Integer getUser_id() {
+        return user_id;
+    } */
+
+
+
 
   //  @Override
     public String getPassword() {
@@ -67,6 +61,22 @@ public class User  {
   //  @Override
     public String getUsername() {
         return username;
+    }
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 
