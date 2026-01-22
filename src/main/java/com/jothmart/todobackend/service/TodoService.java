@@ -32,12 +32,6 @@ public class TodoService {
         return todo;
     }
 
-
-    /*  public  boolean deleteById(Long todo_id){
-        return this.todos.removeIf(obj -> obj.getId() == todo_id);
-    } 
- */
-
 public Todo deleteById(long id) {
 		Todo todo = findById(id);
 		
@@ -56,7 +50,6 @@ public Todo deleteById(long id) {
 				return todo;
 			}
 		}
-		
 		return null;
 	}
 
